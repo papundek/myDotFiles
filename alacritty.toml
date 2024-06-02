@@ -1,0 +1,27 @@
+# NEB'S ALACRITTY CONFIG
+
+
+# Imports
+import = [
+	"~/.config/alacritty/alacritty-theme/themes/catppuccin_mocha.toml"
+]
+
+
+# Window 
+[window]
+padding = { x = 5, y = 5 }
+decorations = "None"
+opacity = 0.98
+
+# Font
+[font]
+normal = {family = "JetBrainsMono Nerd Font", style = "Medium"}
+bold = {family = "JetBrainsMono Nerd Font", style = "Bold"}
+italic = {family = "JetBrainsMono Nerd Font", style = "Italic"}
+bold_italic = {family = "JetBrainsMono Nerd Font", style = "ExtraBold Italic"}
+size = 16.0
+
+# Cursor
+[cursor]
+style = {shape = "Block",blinking = "Always"}
+blink_interval = 300

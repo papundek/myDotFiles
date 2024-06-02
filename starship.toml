@@ -1,0 +1,109 @@
+# NEB'S STARSHIP PROMPT CONFIG
+
+format = """
+[$username](bold #f5e0dc)\
+[$os](bold #89b4fa)\
+[$directory](bold #f38ba8)\
+[$git_branch](bold pink)\
+[$time](#eba0ac)\
+[$cmd_duration](#fab387)
+[🢩 ](bold #f2cdcd)
+
+"""
+
+
+# display username on prompt
+[username]
+format = '\[[$user]($style)\]'
+style_root = "fg:#f9e2af"
+disabled = false
+show_always = true
+
+# display OS on prompt 
+[os]
+format = '\[[on $symbol ]($style)\]'
+style = 'fg:#89b4fa'
+disabled = false
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+# display directory on prompt
+[directory]
+format = '\[[@ $path](style)[$read_only]($read_only_style)\]'
+truncation_length = 8
+truncation_symbol = '/'
+read_only = '🔒'
+home_symbol = '🏠'
+
+# display git-symbol on prompt
+[git_branch]
+format = '\[[on $symbol$branch(:remote_branch)]($style)\]'
+symbol = ' '
+style = 'fg:#f5e0dc'
+truncation_length = 25
+truncation_symbol = ''
+
+[git_status]
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+staged = '[++\($count\)](green)'
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = '🔖'
+
+# display time on prompt
+[time]
+disabled = false
+style = 'fg:#eba0ac'
+format = '\[[$time]($style)\]'
+
+# display comand duration to prompt
+[cmd_duration]
+min_time = 45_000 
+format = 'took [$duration](bold #fab387)'
+
